@@ -27,6 +27,7 @@ namespace WebApplication1.Controllers
         public ActionResult Create(PessoaViewModel model)
         {
             ModelState.Remove("Codigo");
+            ModelState.Remove("Ativo");
             if (ModelState.IsValid)
             {
                 //Pessoa p = new Pessoa();

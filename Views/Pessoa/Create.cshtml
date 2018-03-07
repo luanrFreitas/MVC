@@ -16,6 +16,7 @@
         </div>*@
 
     @Html.HiddenFor(m => Model.Codigo)
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="form-group">
         @Html.LabelFor(m => Model.Cpf)
         @Html.TextBoxFor(m => Model.Cpf, new { @class = "form-control" })
@@ -33,7 +34,7 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => Model.DataNascimento)
-        @Html.EditorFor(m => Model.DataNascimento, new { @class = "form-control" })
+        @Html.TextBoxFor(m => Model.DataNascimento, new { @class = "form-control" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => Model.Email)
@@ -42,6 +43,10 @@
     <div class="form-group">
         @Html.LabelFor(m => Model.Telefone)
         @Html.TextBoxFor(m => Model.Telefone, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => Model.Texto)
+        @Html.EditorFor(m => Model.Texto, new { @class = "form-control" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => Model.Ativo)

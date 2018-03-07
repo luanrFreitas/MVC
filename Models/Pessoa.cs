@@ -23,7 +23,7 @@ namespace WebApplication1.Models
 
         public string Telefone { get; set; }
 
-
+        [DataType(DataType.MultilineText)]
         public string Texto { get; set; }
         //[Required]
         //[MaxLength(100)]

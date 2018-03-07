@@ -19,22 +19,22 @@
 
 {
 
-    var manipulado = Html.Partial("_PessoaParcialView", item);
+    @*var manipulado = Html.Partial("_PessoaParcialView", item);
     string div = "<div style='background-color:Red'>{0}</div>";
 
     MvcHtmlString result = new MvcHtmlString(String.Format(div, manipulado));
 
-    @result
+    @result*@
 
     @*@Html.Partial("_PessoaParcialView", item)*@
 
-<br />
-    {Html.RenderPartial("_PessoaParcialView", item);}
 
-<br />
+    //{Html.RenderPartial("_PessoaParcialView", item);}
+
+
 }
 
-@*<table class="table table-hover table-striped">
+<table class="table table-hover table-striped">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Cpf)
@@ -91,4 +91,4 @@
         </tr>
     }
 
-    </table>*@
+    </table>
