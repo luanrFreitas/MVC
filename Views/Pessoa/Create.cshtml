@@ -1,0 +1,56 @@
+﻿@model WebApplication1.Models.PessoaViewModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cadastro de Pessoas</h2>
+
+@using (Html.BeginForm())
+{
+<div class="container">
+    @*<div class="form-group">
+            @Html.LabelFor(m => Model.Codigo)
+            @Html.TextBoxFor(m => Model.Codigo, new { @class = "form-control" })
+        </div>*@
+
+    @Html.HiddenFor(m => Model.Codigo)
+    <div class="form-group">
+        @Html.LabelFor(m => Model.Cpf)
+        @Html.TextBoxFor(m => Model.Cpf, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => Model.Cpf, "", new { @class = "text-danager" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => Model.Nome)
+        @Html.TextBoxFor(m => Model.Nome, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => Model.Nome)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => Model.Sobrenome)
+        @Html.TextBoxFor(m => Model.Sobrenome, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => Model.Sobrenome)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => Model.DataNascimento)
+        @Html.EditorFor(m => Model.DataNascimento, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => Model.Email)
+        @Html.TextBoxFor(m => Model.Email, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => Model.Telefone)
+        @Html.TextBoxFor(m => Model.Telefone, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => Model.Ativo)
+        @Html.EditorFor(model => model.Ativo, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.DisplayFor(model => model.Ativo, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <input type="submit" name="Salvar" value="Cadastrar" class="btn btn-primary" />
+
+
+</div>
+}
+

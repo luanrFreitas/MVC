@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    Loren ipsum...
+</p>
+@ViewBag.Mensagem
+
+<p>
+    @Html.ActionLink("Cadastrar", "Create")
+    @Html.ActionLink("Listar", "List")
+</p>
